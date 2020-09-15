@@ -1,0 +1,33 @@
+﻿@model CountryInfo.Models.CountriesListElement
+@using (Html.BeginForm("SaveNewCountry", "Home", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+{
+    <div class="jumbotron">
+        <p>
+            <label>Name:</label>
+            @Html.DisplayTextFor(m => m.Name)
+        </p>
+        <p>
+            <label>Code:</label>
+            @Html.DisplayTextFor(m => m.Code)
+        </p>
+        <p>
+            <label>Capital:</label>
+            @Html.DisplayTextFor(m => m.Capital)
+        </p>
+        <p>
+            <label>Area (km^2):</label>
+            @Html.DisplayTextFor(m => m.Area)
+        </p>
+        <p>
+            <label>Population:</label>
+            @Html.DisplayTextFor(m => m.Population)
+        </p>
+        <p>
+            <label>Region:</label>
+            @Html.DisplayTextFor(m => m.Region)
+        </p>
+    </div>
+    <label>Do you want to save this information?</label>
+    <input type="submit" class="btn btn-default" value="Yes" />
+    @Html.ActionLink("No", "Index", "Home", new { @class = "btn btn-default" })
+}

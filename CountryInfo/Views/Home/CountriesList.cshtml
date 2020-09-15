@@ -1,0 +1,29 @@
+﻿@model List<CountryInfo.Models.CountriesListElement>
+
+<div class="jumbotron">
+    <table class="table">
+        <thead class="thead-inverse">
+            <tr>
+                <th>Name</th>
+                <th>Code</th>
+                <th>Capital</th>
+                <th>Area</th>
+                <th>Population</th>
+                <th>Region</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var c in Model)
+            {
+                <tr>
+                    <th>@c.Name</th>
+                    <th>@c.Code</th>
+                    <th>@c.Capital</th>
+                    <th>@c.Area</th>
+                    <th>@c.Population</th>
+                    <th>@c.Region</th>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
